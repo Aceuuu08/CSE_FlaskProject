@@ -35,8 +35,7 @@ BSCS3 - B1
 ## URLS or API END POINTS
 - http://127.0.0.1:5000/login # login page
 - http://127.0.0.1:5000/logout # to logout
--
 - GET http://127.0.0.1:5000/player # to view all the Player profile
 - POST http://127.0.0.1:5000/player # to add another Player profile
 - PUT http://127.0.0.1:5000/player/int:id # input the ID of the player you want to UPDATE 
-- DELETE http://127.0.0.1:5000/player/int:id # input the ID of the player you want to UPDATE
+- DELETE http://127.0.0.1:5000/player/int:id # input the ID of the player you want to DELETE
