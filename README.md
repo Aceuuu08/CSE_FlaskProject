@@ -33,7 +33,7 @@ BSCS3 - B1
 - Lastly, click SEND to execute. and wait for the message if it is successful or not.
 
 ## URLS
-http://127.0.0.1:5000/login # login page
-http://127.0.0.1:5000/player # POST
-http://127.0.0.1:5000/logout # to logout
-http://127.0.0.1:5000/player/{id} # input the ID of the player you want to UPDATE or DELETE
+- http://127.0.0.1:5000/login # login page
+- http://127.0.0.1:5000/player # POST
+- http://127.0.0.1:5000/logout # to logout
+- http://127.0.0.1:5000/player/{id} # input the ID of the player you want to UPDATE or DELETE
