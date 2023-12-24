@@ -32,8 +32,11 @@ BSCS3 - B1
 - Go to the Body tab, write/put the fields and values that you want to insert or to update. (This is not necessary when you use the DELETE method.)
 - Lastly, click SEND to execute. and wait for the message if it is successful or not.
 
-## URLS
+## URLS or API END POINTS
 - http://127.0.0.1:5000/login # login page
-- http://127.0.0.1:5000/player # POST
 - http://127.0.0.1:5000/logout # to logout
-- http://127.0.0.1:5000/player/{id} # input the ID of the player you want to UPDATE or DELETE
+-
+- GET http://127.0.0.1:5000/player # to view all the Player profile
+- POST http://127.0.0.1:5000/player # to add another Player profile
+- PUT http://127.0.0.1:5000/player/int:id # input the ID of the player you want to UPDATE 
+- DELETE http://127.0.0.1:5000/player/int:id # input the ID of the player you want to UPDATE
