@@ -12,7 +12,7 @@ app.config["SECRET_KEY"] = "89f8e8012829949cc95557c64485fbdf"
 
 mysql = MySQL(app)
 
-users = {'username': 'password'}
+users = {'admin': 'admin12345'}
 
 def data_fetch(query):
     cur = mysql.connection.cursor()
@@ -20,6 +20,28 @@ def data_fetch(query):
     data = cur.fetchall()
     cur.close()
     return data
+
+@app.route("/")
+def home():
+    if session.get("username"):
+        return redirect(url_for("get_player"))
+    return render_template("base.html")
+
+@app.route("/login", methods=["POST"])
+def login():
+    username = request.form.get("username")
+    password = request.form.get("password")
+
+    if username in users and users[username] == password:
+        session['username'] = username
+        return redirect(url_for('get_player'))
+
+    return render_template("base.html", message="Invalid credentials")
+
+@app.route("/logout")
+def logout():
+    session.pop('username', None)
+    return redirect(url_for('home'))
 
 @app.route("/player", methods=["GET"])
 def get_player():
@@ -34,7 +56,7 @@ def get_player_by_id(id):
 
 
 @app.route("/player", methods=["POST"])
-def add_actor():
+def add_player():
     cur = mysql.connection.cursor()
     info = request.get_json()
     first_name = info["first_name"]
@@ -67,7 +89,7 @@ def add_actor():
 
 
 @app.route("/player/<int:id>", methods=["PUT"])
-def update_actor(id):
+def update_player(id):
     cur = mysql.connection.cursor()
     info = request.get_json()
     first_name = info["first_name"]
