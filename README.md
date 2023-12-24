@@ -1,8 +1,9 @@
-# CSE_FlaskProject
-# LOTA, ARVIN CLARK T.
+# GAMING ROSTER MANAGEMENT
+
+## LOTA, ARVIN CLARK T.
 ## BSCS3 - B1
 
-# GAMING ROSTER MANAGEMENT
+
 
 ### You need the following to run the program:
 ### 1. MySQL
