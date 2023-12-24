@@ -39,3 +39,6 @@ BSCS3 - B1
 - POST http://127.0.0.1:5000/player # to add another Player profile
 - PUT http://127.0.0.1:5000/player/int:id # input the ID of the player you want to UPDATE 
 - DELETE http://127.0.0.1:5000/player/int:id # input the ID of the player you want to DELETE
+
+## Video Explainer
+https://drive.google.com/file/d/1UhTE7lOI_MGFNJtTkcyB2kWaXG4J3lFf/view?usp=sharing
